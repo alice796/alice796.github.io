@@ -1,0 +1,250 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Typfaces */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'Rozhaone';
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* General setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0px;
+    width: 100%;
+}
+
+/* Typography Styles */
+h1 {
+    font-family: 'Rozhaone', serif;
+    text-align: center;
+    transform: rotate(3deg);
+    position: relative;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    word-spacing: 5px;
+}
+
+h2 {
+    text-align: left;
+    position: relative;
+    font-size: 20px
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75rem;
+    letter-spacing: .031rem;
+    word-spacing: .125rem;
+}
+
+.highlight {
+    font-size: 40px;
+    padding: 5px;
+    border: .8rem rgb(34, 43, 102);
+    background-color: rgb(34, 43, 102);
+    border-top-left-radius: 10% 30%;
+    border-bottom-right-radius: 10% 30%;
+    box-shadow: 2px 4px;  
+    color:lightgrey;
+    letter-spacing: 0.125rem;
+}
+
+.spans {
+    font-family: 'Rozhaone', serif;
+    font-size: 25px;
+    padding: 8px;
+    background-color: rgb(34, 43, 102);
+    border-radius: 10px 10px;
+    box-shadow: lightgrey;
+    box-shadow: 2px 4px;
+    color:lightgrey;
+    margin-top: 15px;
+}
+
+/* Layout */
+main {
+    padding-bottom: 10px;
+    min-width:45rem;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 90%;
+}
+
+img {
+    width: 100%;
+    display: block;
+    max-width: 160px;
+}
+
+.mainsection {
+    display: flex;
+}
+.mainsection article {
+    width:70%;
+}
+.mainsection aside {
+    width: 40%;
+    margin-left: 3%;
+    margin-top: -50px;
+    padding-left: 3%;
+    border-left: 2px solid #333;
+}
+
+footer {
+    display: grid;
+    text-align: right;
+    text-decoration: none;
+    margin-top: 40px;
+}
+.copyright {
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: -30px;
+    margin-left: 50px;
+}
+.copyright2 {
+    font-size: 11px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}
+.subsection {
+    display: flex;
+}
+.pictures {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row {
+    clear: both;
+}
+.stag {
+    float: left;
+    margin: 0 12px 0 0;
+}
+h4 {
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+h4 a{
+    color: aliceblue
+}
+
+nav {
+    font-size: 16px;
+	margin: 28px 0;
+	padding: 0 5%; 
+    background-color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+nav a:nth-child(even):hover {
+    color:black;
+    text-decoration-line: line-through;
+    transform: rotate(-10deg);
+}
+
+nav a:nth-child(odd):hover {
+    color:black;
+    text-decoration-line: line-through;
+    transform: rotate(10deg);
+}
+
+nav:nth-child(odd):focus
+nav:nth-child(odd):hover
+nav:nth-child(odd):active {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+nav a {
+	display: inline-block;
+	padding: 8px 40px;
+	text-decoration: none;
+	font-weight: bold;
+	color: navy;
+}
+
