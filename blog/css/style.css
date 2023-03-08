@@ -102,7 +102,7 @@ h3 {
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-size: .75rem;
+    font-size: 13px;
     letter-spacing: .031rem;
     word-spacing: .125rem;
 }
@@ -158,6 +158,9 @@ img {
     margin-top: -50px;
     padding-left: 3%;
     border-left: 2px solid #333;
+}
+.small {
+    font-size: 12px;
 }
 
 footer {
